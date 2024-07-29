@@ -1,0 +1,243 @@
+
+
+body {
+    background-color: black;
+}
+
+
+#title-div2 {
+    justify-content: center;
+    border: 1px solid white;
+}
+
+#title-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#dashboard-title {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(218, 199, 34);
+    font-style:italic;
+    font-size: 50px;
+    text-shadow:
+        2px 2px 0 rgb(28, 190, 240);
+}
+
+/* BEGIN MAIN DIVISION */
+#main-div {
+    display: flex;
+    justify-content: space-around;
+}
+#options-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 7%;
+    margin-top: 100px;
+}
+#projects-div {
+    width: 25%;
+    /* justify-content: center; */
+    text-align: center;
+    width: 45%;
+}
+#news-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 45%;
+}
+
+/* SUB-DIVISIONS IN MAIN */
+.main-button {
+    height: 50px;
+    border: 2px solid rgb(241, 147, 226);
+    border-radius: 8px;
+    color: rgb(201, 201, 201);
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(33, 6, 184);
+    min-width: 100%;
+    font-style: oblique;
+    margin-bottom: 2px;
+}
+.main-button:hover {
+    color: gold;
+    font-size: 20px;
+}
+
+#projects-dd {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    font-size: 15px;
+    height: 25px;
+    border-radius: 10px;
+}
+#project-display {
+    margin-top: 5px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    /* border: 1px solid white; */
+}
+
+#project-title {
+    color: orange;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+
+
+#comment-box {
+    width: 600px;
+    text-align: left;
+    text-wrap: wrap;
+    min-height: 50px;
+}
+
+#news-comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+    /* margin-left: 100px; */
+    margin-top: 6px;
+    align-content: center;
+    text-align: center;
+}
+
+#comment-submit {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    /* margin-left: auto; */
+    margin-right: auto;
+}
+
+.comment-span {
+    margin-bottom: 5px;
+}
+
+#comments {
+    display: flex;
+    flex-direction:column;
+}
+
+#news-form {
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+.form-input {
+    border-radius: 8px;
+    height: 50%;
+    width: 100px;
+}
+
+#news-msg {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color:bisque;
+    text-align: center;
+}
+
+#news-spawn {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#quote-div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#quote {
+    color:aquamarine;
+    font-style:italic;
+}
+
+.project-span {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.project-label {
+    display: inline;
+    color: gold;
+    font-size: 20px;
+    font-style:italic
+}
+
+.project-text {
+    display: inline;
+    font-weight: bold;
+    font-size: 17px;
+    color:rgb(207, 207, 207);
+    margin-left: 8px;
+}
+
+.p-div {
+    margin-top: 10px;
+}
+
+.project-summary {
+    color: lightpink
+}
+
+.project-key {
+    color:rgb(230, 169, 96)
+}
+
+#modify-projects {
+    height: 35px;
+    border: 1px solid pink;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: pink;
+    border-radius: 10px;
+}
+
+
+.white-text {
+    color: white;
+    display: inline;
+}
+
+.gold-text {
+    color:goldenrod;
+    display: inline;
+}
+form {
+    text-align: right;
+    justify-content: right;
+    display: flex;
+}
+
+#test-div {
+    display: flex;
+    text-align: center;
+    /* flex-wrap: wrap; */
+}
+
+th {
+    color: rgb(226, 226, 226);
+}
+
+td {
+    color:rgb(167, 167, 167);
+}

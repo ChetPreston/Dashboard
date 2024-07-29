@@ -1,0 +1,26 @@
+.footer-button {
+    height: 35px;
+    background-color: rgb(2, 2, 116);
+    color: gold;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    min-width: 80px;
+    margin-right: 1px;
+    border-radius: 6px;
+}
+
+#footer-div {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* border: 1px solid black; */
+    text-align: center;
+    width: 100%;
+}
+
+.footer-button:hover {
+    color:red;
+}

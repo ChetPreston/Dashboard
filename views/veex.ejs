@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/veex.css">
+        <%- include('header'); -%>
+    </head>
+    <body>
+        <div id="title-div">
+            <h1 id="dashboard-title">VEEx Dashboard</h1>
+        </div>
+        
+        <!-- <div id="quote-div">
+            <h3 id="quote">"Never study to be successful, study for self efficiency. Don't chase success; follow excellence and success will chase you." ~ Rancho</h3>
+        </div> -->
+        <div id="main-div">
+            <div id="options-div">
+                <button class="main-button" id="schedules">Personel Schedules</button>
+                <button class="main-button" id="test-scheds">Test Schedule</button>
+                <button class="main-button" id="one-note">Passdown</button>
+
+                <button class="main-button" id="projects-button">Projects</button>
+                <button class="main-button" id="terminal-room">Terminal Room</button>
+            
+
+            </div>
+            <div id="projects-div">
+                <h2 id="project-title">VEEx Projects</h2>
+                <button id='modify-projects'>Modify Projects</button>
+                <select id="projects-dd">
+                </select><br>
+                 <!-- <select id="projects-dd">
+                     <option value="Facility">Facility</option>
+                    <option value="LLRCS">LLRCS</option>
+                    <option value="STI">STI</option>
+                    <option value="APU">APU</option>
+                    <option value="B-HEX">B-HEX</option>
+                    <option value="Rigel">Rigel</option>
+                    <option value="Recirc">Recirc</option>
+                    <option value="HPU">HPU</option>
+                    <option value="Refueler">Refueler</option>
+                </select>  -->
+                <div id="project-overview">
+                    <table id='table-overview'>
+                    </table>
+                </div>
+                <div id="project-display">
+                    <div class="p-div">
+                        <p class="project-label">Project Name:</p>
+                        <p class="project-text" id="project-name"></p>
+                    </div>
+                    <div class="p-div">
+                        <p class="project-label">Project Manager:</p>
+                        <p class="project-text" id="project-manager"></p>
+                    </div>
+                    <div class="p-div">
+                        <p class="project-label">Engineers A:</p>
+                        <p class="project-text" id="eng-a"></p>
+                    </div>
+                    <div class="p-div">
+                        <p class="project-label">Engineers B:</p>
+                        <p class="project-text" id="eng-b"></p>
+                    </div>
+                    <div class="p-div">
+                        <p class="project-label">DSCE:</p>
+                        <p class="project-text" id="dsce"></p>
+                    </div>
+                    <div class="p-div">
+                        <p class="project-label">Summary:</p>
+                        <p class="project-text" id="summary"></p>
+                    </div>
+                    <div class="p-div">
+                        <p class="project-text" id="is-active"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="news-div">
+                <div>
+                    <form id='news-form' action="/comments/image" enctype="multipart/form-data" method="POST">
+                        <input class="form-input" type="file" id="fileInput" name="veex_image1" accept="image/*">
+                        <input class="form-input" type="submit" value="Upload" id="image-upload" window.location.href='veex'>
+                    </form>
+                    <img id="previewImage" src="#" alt="Preview Image"  style="display: none; max-height: 500px;">
+                    <!-- <h2 id="news-msg">Welcome to the (pre)launch of the VEEx Dashboard!!</h2> -->
+                    <!-- <img id="news-img" src="images/8-7xGgfsDw6EOq8bo.png" height='400' width="500"> -->
+                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/aUCNEmKz1dc?si=W70euvF9ENjnMGI1" allow="web-share" referrerpolicy="strict-origin-when-cross-origin" title="Embedded YouTube Video" frameborder="0" allowfullscreen></iframe> -->
+                    <div id="comments"></div>
+                </div>
+                <div id="news-comments"> 
+                    <span id="news-span">
+                        <textarea id="comment-box" placeholder="Add comment here" oninput="autoExpand(this)"></textarea>
+                        <!-- <input id="comment-name" placeholder="Name"> -->
+                        
+                    </span>
+                    <input id="comment-submit" type="submit" value="Add Comment">
+                </div>
+                
+            </div>
+        </div>
+        <%- include('footer'); -%>
+        <script src="js/veex.js"></script> 
+    </body>
+</html>

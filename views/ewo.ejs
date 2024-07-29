@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/ewo.css" />
+	<%- include('header'); -%>
+</head>
+<body class="main">
+	<div id="main-div">
+		<p class="title2">Create New eWo</p>
+	<div id="site-select">
+		<p id="site-title">Select Site</p>
+		<div id="choices">
+			<input type="radio" id="veex" name="radio" value="veex" checked>
+			<label class='formLabel' for="veex">VEEx</label>
+			<input type="radio" id="geex" name="radio" value="geex">
+			<label class='formLabel' for="geex">GEEx</label>
+			<input type="radio" id="xeex" name="radio" value="xeex">
+			<label class='formLabel' for="xeex">XEEx</label>
+			<input type="radio" id="4670" name="radio" value="4670">
+			<label class='formLabel' for="4670">4670</label>
+		</div>
+	</div>
+	<div class="stdBorder">
+	
+			<!-- <label for="projectName" class="formLabel">Project:</label> -->
+				<label for="cc" class="formLabel">Project:</label>
+			<select name="cc" id="cc" onchange="updateChargeCode()">
+				<option value="ADP Rigel" class="formList">ADP Rigel</option>
+				<option value="BE-3U Chill-in" class="formList">BE-3U Chill-in</option>
+				<option value="BE-3U DSI Cryo" class="formList">BE-3U DSI Cryo</option>
+				<option value="BE-3U Vacuum Start" class="formList">BE-3U Vacuum Start</option>
+				<option value="BE-4 1N STI" class="formList">BE-4 1N STI</option>
+				<option value="Fuel Cell" class="formList">Fuel Cell</option>
+				<option value="GS2 Re-Circ Pump" class="formList">GS2 Re-Circ Pump</option>
+				<option value="GS2 Re-Fueler" class="formList">GS2 Re-Fueler</option>
+				<option value="Hydrogen Valve Embrittlement" class="formList">Hydrogen Valve Embrittlement</option>
+				<option value="ISS" class="formList">ISS</option>
+				<option value="Lunar Lander Thruster" class="formList">Lunar Lander Thruster</option>
+				<option value="NGS1 Hydraulic Hex" class="formList">NGS1 Hydraulic Hex</option>
+				<option value="NGS2 APU" class="formList">NGS2 APU</option>
+				<option value="NGS2 H2 Diffuser" class="formList">NGS2 H2 Diffuser</option>
+				<option value="VEEx Improvements" class="formList">VEEx Improvements</option>
+				<option value="VEEx Maintenance" class="formList">VEEx Maintenance</option>
+				<option value="VEEx Spares" class="formList">VEEx Spares</option>
+				<option value="Other" class="formList">Other</option>
+			</select></br>
+			<!-- <input type="text" id="projectName" name="projectName" class="formInput"></br> -->
+			<label for="description" class="formLabel">Description:</label>
+			<input type="text" id="description" name="description" placeholder="Add basic item description" class="formInput"></br>
+			<div id="shit">
+					<label for="eng2" class="formLabel">RE: </label>
+					<input type="text" id="eng2" class="formName" min="1" max="30" value="1"></br> 
+					<label for="eng3" class="formLabel">Specialist: </label>
+					<input type="text" id="eng3" class="formName"></br>			
+			</div></br>
+			<label for="qty" class="formLabel">Quantity:</label>
+			<input type="number" id="qty" class="formNumber" min="1" max="30" value="1"></br> 
+			<label for="materials" class="formLabel">Materials:</label>
+			<select name="material" id="materials">
+				<option value="Stainless Steel" class="formList">Stainless Steel</option>
+				<option value="Aluminum" class="formList">Aluminum</option>
+				<option value="Monel" class="formList">Monel</option>
+				<option value="Nickel" class="formList">Nickel</option>
+				<option value="Brass" class="formList">Brass</option>
+				<option value="Inconel" class="formList">Inconel</option>
+				<option value="Other" class="formList">Other</option>
+			</select></br>
+			<label for="dueDate" class="formLabel">Due Date:</label>
+			<input type="date" id="dueDate" name="dueDate"></br>
+			<label for="chargeCode" class="formLabel">Charge Code:</label>
+			<input type="text" id="chargeCode" name="chargeCode" class="formInput" value="202R021.0011.0002.0001"></br>
+			<label for="cleaningSteps" class="formLabel">Cleaning Steps:</label>
+			<select name="cleaningSteps" id="cleaningSteps" onchange="updateClean()" class="cleanForm">
+				<option value="1" class="formList">Gross Clean and Verify 300D - Electromechanical</option>
+				<option value="2" class="formList">Gross Clean and Verify 300D</option>
+				<option value="3" class="formList">Gross Clean Only</option>
+				<option value="4" class="formList">Gross Clean Only - Soft Goods</option>
+				<option value="5" class="formList">Passivate, Gross Clean, and Verify 300D - W/O Soft Goods</option>
+				<option value="6" class="formList">Passivate, Gross Clean, and Verify 300D - With Soft Goods</option>
+				<option value="7" class="formList">Proof, Passivate, Gross Clean, and Verify 300D - Tubing</option>
+			</select></br>
+			<label for="templateEwo" class="formLabel">Template #:</label>
+			<input type="text" id="templateEwo" name="templateEwo" class="formInput" value="1193122"></br>
+			<label for="notesCPV" class="formLabel">Notes for CPV:</label>
+			<input type="text" id="notesCPV" name="notesCPV" class="formInput" placeholder="<optional>"></br>
+			<label for="yourName" class="formLabel">Name</label>
+			<input type="text" id="yourName" class="formInput" placeholder="Full name or Blue ID"></br>
+				
+	
+		<div id="ewo-buttons">
+			<button id="create-ewo-button" class="add">CREATE</button>
+			<button onclick="window.location.href='/julesdb'" class="add home">HOME</button>
+		</div>
+	</div>
+</div>
+	<%- include('footer'); -%>
+	<script src="js/ewo.js"></script>
+</body>
+</html>
+	

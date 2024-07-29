@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/header.css">
+  <div id="header-div"> 
+    <div id="banner">
+        <button id="home-btn">HOME</button>
+        <button id="veex-btn">VEEx</button>
+        <button id="geex-btn">GEEx</button>
+        <button id="xeex-btn">XEEx</button>
+        <button id="alabama-btn">4670</button>
+    </div>
+    <div id="feather">
+        <img id='feather-img' src="images/Blue_Origin_Feather.svg.png" height="60" width="240">
+    </div>
+    <div id="accounts">
+        <% if (user) { %>
+        <div id="login-msgs">
+            <p id="login-status">Welcome,<br><%= user.username %></p>
+            <!-- <p id="login-msg"></p> -->
+        </div>
+        <% } else { %>
+            <div id='login-msgs'>
+                <p id="login-status">Welcome, Guest</p>
+                <!-- <p id="login-msg"></p> -->
+            </div>
+        <% } %>
+        <% if (!user) { %>
+        <div id="login-div">
+            <button id="create-account" onclick="createUser()">Create Account</button>
+            <button id="login-button" onclick="loginUser()">Login</button>
+        </div>
+        <div id="credenitals">
+            <input type="text" id="username" placeholder="email">
+            <input type="password" id="password" placeholder="password">
+        </div>
+        <% } %>
+        <% if (user) { %>
+        <div id="logout-div">
+            <button onclick="logoutUser()" id="logout-button">Logout</button>
+        </div>  
+        <% } %>
+        
+    </div>
+</div>
+<script src="js/header.js"></script>
+</head>

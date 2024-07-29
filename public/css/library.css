@@ -1,0 +1,9 @@
+#document-div, #wiki-div, #video-div, #git-div {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+ul {
+    font-size: 18px;
+    font-weight: bold;
+}

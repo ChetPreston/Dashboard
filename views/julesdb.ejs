@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/julesdb.css" />
+	<%- include('header'); -%>
+</head>
+<body>
+	<div class="main">
+		<div id="top">
+			<h1 class="title">Work Orders</h1>
+		</div>
+		<div class="butts">
+			<p id='actions'>Actions:</p>
+			<button id='add-button'class="add">Add</button>
+			<button id='delete-button' class="delete">Delete</button>
+			<button id='update-button' class="release">Update</button>
+			<button id='refresh-button' class="refresh">Refresh All</button>
+			<button id="okta-button" class="add">Okta</button>
+			<input id="id-input" type="number" value=1>
+			<p id="input-error"></p>
+		</div>
+		<div id='display-data'>
+			<table id="ewo-table">
+				<thead>
+				<tr id="table-title" class="tr-main">
+					<td>ID</td>
+					<td>Site</td>
+					<td>Project</td>
+					<td>Description</td>
+					<td>QTY</td>
+					<td>Materials</td>
+					<td>Due Data</td>
+					<td>Charge Code</td>
+					<td>Cleaning Steps</td>
+					<td>Template #</td>
+					<td>Additional Notes</td>
+					<td>Name</td>
+					<td>RE</td>
+					<td>Specialist</td>
+					<td>eWo Number</td>
+					<td>Status</td>
+				</tr>
+			</thead>
+			</table>
+		</div>
+		<!-- <div class="stdBorder2">
+			<img id='cow1' src="images/cow.jpg"  height="144" width="256">
+			<img id='cow2' src="images/cow2.jpg" onclick="loadAndDisplayExcelSheet(0)" height="144" width="256">
+			<img id='cow3' src="images/cow3.jfif"  height="144" width="256">
+			<img id='cow4' src="images/cow4.jpg"  height="144" width="256">
+			<img id='cow5' src="images/cow5.jpg"  height="144" width="256">
+			<img id='cow6' src="images/cow6.jpg"  height="144" width="256">
+		</div> -->
+		<button id="run-button" class="delete">RUN ALL</button>
+	</div>
+	<%- include('footer'); -%>
+	<script src="js/julesdb.js"></script>
+</body>
+</html>
+
+		

@@ -1,0 +1,26 @@
+#msg, #msg-fp {
+    color: red;
+    font-size: 19px;
+}
+input {
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button:hover {
+    color: rgb(228, 228, 228);
+    background-color: rgb(36, 36, 36);
+}
+button { 
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+#inputs, #btns {
+    margin-bottom: 15px;
+    margin-left: 10%;
+}

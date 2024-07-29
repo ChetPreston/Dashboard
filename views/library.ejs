@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/library.css">
+        <%- include('header'); -%>
+    </head>
+            <body>
+                <div id="options-div">
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="wiki-box" value="wiki" checked="true">
+                            <label>Wiki</label>                          
+                        </li>
+                        <li>
+                            <input type="checkbox" id="git-box" value="git" checked="true">
+                            <label>Gits</label>                           
+                        </li>
+                        <li>
+                            <input type="checkbox" id="document-box" value="document" checked="true">
+                            <label>Document</label>                           
+                        </li>
+                        <li>
+                            <input type="checkbox" id="video-box" value="video" checked="true">
+                            <label>Video</label>
+                        </li>                     
+                    </ul>
+                </div>
+                <div id="wiki-div">
+                    <h2>Wiki Pages</h2>
+                    <a href="https://wiki.blueorigin.com/display/TF/User+Guides" target="_blank">DSCE User Guides</a><br>
+                    <a href="https://wiki.blueorigin.com/display/WTLS/XEEx+DSCE+Informational+Wikis" target="_blank">DSCE at XEEx</a><br>
+                    
+                    <a href="https://wiki.blueorigin.com/display/TF/DSCE+Schematics" target="_blank">DSCE Schematics</a><br>
+                    <a href="https://wiki.blueorigin.com/display/EDH/EDH-ES-2.5+-+Test+Instrumentation" target="_blank">Test Facility Instrumentation</a><br>
+                    <a href="https://wiki.blueorigin.com/display/WTLS/TTO+Charging+Guidance" target="_blank">TTO Charging Guide</a><br>
+                    <a href="https://wiki.blueorigin.com/pages/viewpage.action?pageId=327358236" target="_blank">VEEx Activation and ICDs</a><br>
+                    <a href="https://wiki.blueorigin.com/display/TF/U-DAQ+Cart" target="_blank">U-DAQ Cart</a>
+                </div>
+                <div id="git-div">
+                    <h2>Git Repositories</h2>
+                    <a href="https://gitlab.blueorigin.com/jwinebrener/bart" target="_blank">Blue Automation Routine Tool</a><br>
+                    <a href="https://gitlab.blueorigin.com/dsce/projects/consolecore/consolecore" target="_blank">Console Core</a><br>
+                    <a href="https://gitlab.blueorigin.com/blue-domain-controllers/dns-mgmt/-/blob/master/dns-records.yml" target="_blank">DNS Records</a><br> 
+                    <a href="https://gitlab.blueorigin.com/dsce/imperio" target="_blank">Imperio</a>
+
+                </div>
+                <div id="document-div">
+                    <h2>Documents</h2>
+                    <div id="hardware-div">
+                        <h3>Hardware</h3>
+                        <ul>Sensors
+
+                        </ul>
+                        <ul>Actuators
+
+                        </ul>
+                        <ul>Regulators
+
+                        </ul>
+                        <ul>Tools
+
+                        </ul>
+                    </div>
+                    <a href="/library/content/DSCE at VEEx.pdf">Document</a><br>
+                </div>
+                <div id="video-div">
+                    <h2>Videos</h2>
+                    <a href="https://youtu.be/aUCNEmKz1dc" target="_blank">Video</a><br>
+                </div>
+        <button id="test-button">TEST ME</button>
+        <%- include('footer'); -%>
+        <script src="js/library.js"></script>
+    </body>
+</html>

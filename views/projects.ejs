@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/projects.css">
+        <%- include('header'); -%>
+    </head>
+    <body>
+        <div id="site-select">
+            <h3 id="site-title">Select Site</h3>
+            <div id="choices">
+            <input type="radio" id="veex" name="radio" value="veex" checked>
+            <label for="veex">VEEx</label>
+            <input type="radio" id="geex" name="radio" value="geex">
+            <label for="geex">GEEx</label>
+            <input type="radio" id="xeex" name="radio" value="xeex">
+            <label for="xeex">XEEx</label>
+            <input type="radio" id="4670" name="radio" value="4670">
+            <label for="4670">4670</label>
+            </div>
+        </div>
+        <div id="main-form">
+            <select id="projects-dd">
+            </select>
+            <div>
+                <label for='project-name'>Project Name:</label>
+                <input type='text' id='project-name'>
+                <label for='manager'>Project Manager:</label>
+                <input type='text' id='manager'>
+            </div>
+            <div>
+                <label for='a1'>A Shift:</label>
+                <input type='text' id='a1'>
+                <label for='a2'>A Shift:</label>
+                <input type='text' id='a2'>
+                <label for='a3'>A Shift:</label>
+                <input type='text' id='a3'>
+            </div>
+            <div>
+                <label for='b1'>B Shift:</label>
+                <input type='text' id='b1'>
+                <label for='b2'>B Shift:</label>
+                <input type='text' id='b2'>
+                <label for='b2'>B Shift:</label>
+                <input type='text' id='b3'>
+            </div>
+            <div>
+                <label for='dsce-a1'>A DSCE:</label>
+                <input type='text' id='dsce-a1'>
+                <label for='dsce-a2'>A DSCE:</label>
+                <input type='text' id='dsce-a2'>
+            </div> 
+            <div>
+                <label for='dsce-b1'>B DSCE:</label>
+                <input type='text' id='dsce-b1'>
+                <label for='dsce-b2'>B DSCE:</label>
+                <input type='text' id='dsce-b2'>
+            </div>
+            <div>
+                <label for='summary'>Summary:</label>
+                <textarea id='sum-box' oninput="expandBorders(this)"></textarea>
+            </div>
+            <div>
+                <input type='checkbox' id='active' checked>
+                <label for='active'>Active Project?</label>
+            </div>
+            <div>
+                <button id='add-project'>Add/Edit Project</button>
+                <button id="remove-project">Remove Project</button>
+            </div>
+            <div>
+                <p id='mod-note' style="color: gold;"></p>
+            </div>
+        </div>
+        <%- include('footer'); -%>
+        <script src="js/projects.js"></script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+    flex-direction: column;
+}
+label {
+    color: lightcyan;
+    /* margin-right: 15px; */
+}
+
+input[type='radio'] {
+    margin-left: 15px;
+}
+
+h3 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: lightcyan;
+    text-align: center;
+}
+
+#main-form {
+    display: flex;
+    width: 100%;
+    /* border: 2px solid whitesmoke; */
+    text-align: left;
+    flex-direction: column;
+    margin-left: 16%;
+}
+
+#site-select {
+    /* border: 2px solid rosybrown; */
+    margin-right: 16%;
+}
+
+#choices {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+input[type='text'] {
+    width: 200px;
+    text-align: center;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+#sum-box {
+    margin-top: 10px;
+    width: 50%;
+}
+
+
+#active {
+    margin-top: 10px;
+}
+
+#add-project{
+    margin-top: 10px;
+}
+
+#projects-dd {
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    width: 40%;
+}
+
+#db-button {
+    height: 30px;
+    font-weight: bold;
+    background-color:black;
+    color: orange;
+}

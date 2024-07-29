@@ -1,0 +1,22 @@
+body {
+    background:black;
+}
+
+#links {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    color: lightgray;
+    justify-content: space-around;
+}
+
+li {
+    margin-top: 8px;
+    font-size: 22px;
+}
+
+a {
+    color: gold;
+}
