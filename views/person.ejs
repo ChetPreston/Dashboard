@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>People of Blue</title>
+        <link rel='stylesheet' href='css/people.css'>
+        <script src="https://unpkg.com/htmx.org@1.7.0/dist/htmx.min.js"></script>
+    </head>
+    <body>
+        
+        <div id='search-box'>
+            <input type='search'
+                name = 'search'
+                placeholder = 'search by name or tags'
+                hx-post='/people/search'
+                hx-trigger='keyup changed delay:500ms'
+                hx-target='#search-list'
+                hx-swap='inner-html'>
+        </div>
+        <button hx-get='/people/all' hx-target='#search-list'>Show all</button>
+        <div id='search-list'>
+        </div>
+        <h2 id="person-name"></h2>
+        <div id="att-div">
+            <h3 id="att-pos"></h3>
+            <ul id="att-list"></ul>
+        </div>
+    </body>
+</html> 

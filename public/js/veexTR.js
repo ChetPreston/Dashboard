@@ -85,7 +85,7 @@ function das1() {
 }
 
 function getStm() {
-    return fetch(`https://veex.blueorigin.com:5001/Stm/TC-E0930`)
+    return fetch(`http://veex.blueorigin.com:5000/Stm/TC-E0930`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');

@@ -23,12 +23,14 @@ const authRoutes = require('./routes/authRoutes')
 const commentRoutes = require('./routes/commentRoutes')
 const projectRoutes = require('./routes/projectRoutes')
 const libraryRoutes = require('./routes/libraryRoutes')
+const peopleRoutes = require('./routes/peopleRoutes')
 const trRoutes = require('./routes/trRoutes')
 const cookieParser = require('cookie-parser')
 const { requireAuth, checkUser, checkConnection } = require('./middleware/authMW')
 const connection = require('./controllers/mySQL')
 const stream = require('node-rtsp-stream')
 const multer = require('multer')
+const { peopleHomepage, showPeople, showPerson } = require('./public/js/people')
 
 // @01               ESTABLISH ARCHITECTURES AND CONNECTIONS
 // @02               Commands for the terminal room layout
@@ -45,11 +47,14 @@ const multer = require('multer')
 const jwtSecret = '28d1a301afccb72337f6f4d5b3270495869bae3690a2b3f4b0bc61674e9a0da01ad99d'
 app.use(express.json());
 app.use(cors());
+// Parse URL-encoded bodies (as sent by HTML forms)
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(authRoutes)
 app.use(commentRoutes)
 app.use(projectRoutes)
 app.use(libraryRoutes)
+app.use(peopleRoutes)
 app.use(trRoutes)
 app.use(express.static(path.join(__dirname, 'public/')))
 app.use(cookieParser());
@@ -71,6 +76,7 @@ app.get('/ewo',requireAuth, (req, res) => res.render('ewo'))
 app.get('/test', (req, res) => {
     res.send('complete')
 })
+app.get('/people', (req, res) => res.send(peopleHomepage()))
 app.get('/imperio', requireAuth, (req, res) => res.render('imperio') )
 app.get('/ewo', requireAuth, (req, res) => res.render('ewo'))
 app.get('/projects', requireAuth, (req, res) => res.render('projects'))
@@ -79,6 +85,31 @@ app.get('/library', (req, res) => res.render('library'))
 app.get('/cameras', requireAuth, (req, res) => res.render('cameras'))
 app.get('/auth/fp', (req, res) => res.render('fp'))
 
+//TEST
+app.get('/people/all', (req, res) => {
+    res.send(showPeople('How you doing?'))
+})
+
+// app.post('/people/search', (req, res) => {
+//     const qry = req.body.search.toLowerCase()
+//     console.log(qry)
+//     console.log('hi')
+//     connection.connect()
+//     connection.query('SELECT * FROM people', (error, results, fields) => {
+//         if (error) {
+//             console.error('Error finding table', error);
+//         } else {
+//             const tableData = results;
+//             console.log(results)
+//             const people = tableData.filter((p) => p.includes(qry))
+//             console.log(people)
+//             res.send(showPeople(people))
+//         }
+//     })
+//     connection.end
+//     console.log('connection closed')
+// })
+    
 // Setup Storage
 let imageName = 'donkey.jpg'
 app.get('/comments/image-name/:name', (req, res) => {
